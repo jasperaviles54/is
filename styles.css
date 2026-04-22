@@ -209,6 +209,15 @@ footer {
     border-radius: 10px;
 }
 
+/* Used in about.html */
+.about-img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
 /* ── News item timestamp ────────────────────────────────────── */
 .news-timestamp {
     color: #888;
