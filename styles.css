@@ -9,6 +9,10 @@ body {
     color: #333;
 }
 
+p {
+    text-align: justify;
+}
+
 header {
     background: #35424a;
     color: #ffffff;
