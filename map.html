@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Eco University Interactive Campus Map - Explore our sustainable campus and CSR initiative locations">
+        <meta name="keywords" content="Eco University, CSR, Higher Education, Sustainability, Community Engagement, Green Campus, Social Responsibility">
+        <title>Interactive Map</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="hei.html"><img src="images/ecoulogo.png" alt="Eco University Logo" class="logo"></a>
+            <span class="school-name">Eco University</span>
+        </div>
+        <h1>Interactive Map</h1>
+        <p>Empowering Education through Corporate Social Responsibility</p>
+        <nav>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="csr.html">CSR in Education</a></li>
+                <li><a href="initiatives.html">CSR Initiatives</a></li>
+                <li><a href="news.html">News & Updates</a></li>
+                <li><a href="map.html">Interactive Map</a></li>
+                <li><a href="events.html">Events Calendar</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="interactive-map">
+        <h2>Interactive Map</h2>
+        <div id="map-container"></div>
+    </section>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map-container'), {
+                center: {lat: -34.397, lng: 150.644},
+                zoom: 8
+            });
+
+            var marker1 = new google.maps.Marker({
+                position: {lat: -34.397, lng: 150.644},
+                map: map,
+                title: 'University A - Green Campus Project'
+            });
+
+            var marker2 = new google.maps.Marker({
+                position: {lat: -35.307, lng: 149.124},
+                map: map,
+                title: 'University B - Community Health Outreach'
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
+
+<footer>
+    <p>&copy; 2024 Eco University. All rights reserved.</p>
+    <div class="social-media">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>
