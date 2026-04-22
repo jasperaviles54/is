@@ -205,7 +205,7 @@ footer {
 }
 
 /* Used in csr.html */
-.section-img-sm {
+.section-img-md {
     width: 100%;
     max-width: 600px;
     display: block;
@@ -220,6 +220,51 @@ footer {
     display: block;
     margin: 15px auto;
     border-radius: 10px;
+}
+
+.section-img-sm {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.image-row .section-img-sm {
+    margin: 0;
+    width: auto;
+    flex: 1 1 300px;
+    max-width: 45%;
+}
+
+/* ── Testimonials (about.html) ────────────────────────────── */
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #35424a;
+    margin: 1.5em 10px;
+    padding: 0.5em 20px;
+    font-style: italic;
+    border-radius: 5px;
+}
+
+blockquote p {
+    display: inline;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: bold;
+    color: #35424a;
 }
 
 /* ── News item timestamp ────────────────────────────────────── */
