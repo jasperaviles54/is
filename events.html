@@ -8,6 +8,7 @@
     <title>Events Calendar - Eco University</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
 </head>
 <body>
     <header>
@@ -159,11 +160,98 @@
 
         </div>
 
-        <h2 class="gcal-section-title">Philippine Holidays Calendar</h2>
-        <div id="calendar">
-            <iframe src="https://calendar.google.com/calendar/embed?src=en.philippines%23holiday%40group.v.calendar.google.com&ctz=Asia%2FManila&hl=en&showTitle=0" class="calendar-iframe" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
-        </div>
+        <h2 class="gcal-section-title">School Events Calendar</h2>
+        <div id="fullcalendar"></div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('fullcalendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                initialDate: '2024-05-01',
+                headerToolbar: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'dayGridMonth,listMonth'
+                },
+                buttonText: {
+                    today: 'Today',
+                    month: 'Month',
+                    list: 'List'
+                },
+                eventColor: '#35424a',
+                eventTextColor: '#ffffff',
+                events: [
+                    {
+                        title: 'Campus Clean-Up Drive',
+                        start: '2024-05-03T07:00:00',
+                        end: '2024-05-03T11:00:00',
+                        color: '#2e7d32',
+                        extendedProps: { location: 'Main Campus Grounds' }
+                    },
+                    {
+                        title: 'CSR Awareness Seminar',
+                        start: '2024-05-15T13:00:00',
+                        end: '2024-05-15T16:00:00',
+                        color: '#1565c0',
+                        extendedProps: { location: 'University Auditorium' }
+                    },
+                    {
+                        title: 'Tree Planting Activity',
+                        start: '2024-05-24T08:00:00',
+                        end: '2024-05-24T12:00:00',
+                        color: '#2e7d32',
+                        extendedProps: { location: 'Eco University Arboretum' }
+                    },
+                    {
+                        title: 'Community Health Outreach',
+                        start: '2024-06-06T09:00:00',
+                        end: '2024-06-06T15:00:00',
+                        color: '#6a1e6e',
+                        extendedProps: { location: 'Barangay Community Hall' }
+                    },
+                    {
+                        title: 'Sustainability Research Forum',
+                        start: '2024-06-20T10:00:00',
+                        end: '2024-06-20T17:00:00',
+                        color: '#e65100',
+                        extendedProps: { location: 'Graduate School Building' }
+                    },
+                    {
+                        title: 'Zero-Waste Workshop',
+                        start: '2024-07-12T14:00:00',
+                        end: '2024-07-12T17:00:00',
+                        color: '#2e7d32',
+                        extendedProps: { location: 'Science Complex, Room 101' }
+                    },
+                    {
+                        title: 'Inter-University CSR Summit',
+                        start: '2024-08-08T09:00:00',
+                        end: '2024-08-08T18:00:00',
+                        color: '#35424a',
+                        extendedProps: { location: 'Convention Center' }
+                    },
+                    {
+                        title: 'Annual CSR Reporting Day',
+                        start: '2024-09-19T13:00:00',
+                        end: '2024-09-19T16:00:00',
+                        color: '#1565c0',
+                        extendedProps: { location: 'University Auditorium' }
+                    }
+                ],
+                eventClick: function(info) {
+                    alert(
+                        info.event.title + '\n' +
+                        'Location: ' + info.event.extendedProps.location + '\n' +
+                        'Time: ' + info.event.start.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}) +
+                        ' \u2013 ' + info.event.end.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+                    );
+                }
+            });
+            calendar.render();
+        });
+    </script>
 
 <footer>
     <p>&copy; 2024 Eco University. All rights reserved.</p>

@@ -356,6 +356,44 @@ footer {
     }
 }
 
+/* ── Add to Google Calendar button ─────────────────────────── */
+.add-to-gcal {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.82em;
+    font-weight: bold;
+    color: #35424a;
+    text-decoration: none;
+    border: 1px solid #35424a;
+    border-radius: 20px;
+    padding: 4px 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.add-to-gcal i {
+    margin-right: 5px;
+    color: inherit;
+}
+
+.add-to-gcal:hover {
+    background-color: #35424a;
+    color: #fff;
+}
+
+/* ── FullCalendar container ─────────────────────────────────── */
+#fullcalendar {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.gcal-section-title {
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
 /* ── CSR overview "See More" button ─────────────────────────── */
 .csr-more-btn-wrap {
     text-align: center;
